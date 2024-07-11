@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTC Green Drive</title>
+    <!-- title logo  -->
+    <link rel="icon" type="image/x-icon" href="assets/img/KTCLOGO.png">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <!-- <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap-icons.min.css"> -->
+    <!-- slick link -->
+    <link rel="stylesheet" href="assets/vendor/slick_slider/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+     <!-- <link rel="stylesheet" href="assets/vendor/slick_slider/slick-theme.css"> -->
+    <!-- aos link -->
+     <link rel="stylesheet" href="assets/vendor/aos/aos.css">
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body onload="myFunction()">
+    <!-- main html start -->
+    <main>
+        <div id="loader">
+            <span class="loader"></span>
+        </div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background-color:#88a203">
+                    <div class="modal-body">
+                        <button type="button" id='close-modal' onclick="closeModal()" class="btn-close float-end"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
+                        <img src="assets/img/modal_img.png" width="100%" alt="modal_img" style="border-radius:5px;">
+                        <div class="modal-contact">
+                            <div><a href="tel:9906246006">9906246006</a></div>
+                            <div><a href="mailto:SKulvinder625@gmail.com">SKulvinder625@gmail.com</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/ktc_logo.png" alt="logo" width="70%">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#contact">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#gallery">Gallery</a>
+                                </li>
+
+                            </ul>
+                            <form class="d-flex" role="search">
+                                <button class="btn px-4 me-3">Login
+                                    <div class="wave"></div>
+                                </button>
+                                <button class="btn px-4" type="submit">Logut
+                                    <div class="wave"></div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- banner start -->
+        <section>
+            <div class="social">
+                <ul>
+                    <li class="twitter"><a href="#">Twitter<i class="bi bi-twitter" aria-hidden="true"></i></a></li>
+                    <li class="facebook"><a href="#">Facebook<i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+                    <li class="whatsapp"><a href="#">Whatsapp<i class="bi bi-whatsapp"></i></i></a>
+                    </li>
+                    <li class="instagram"><a href="#">Instagram<i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/img/banners/banner-1.webp" class="d-block w-100" alt="banner-1">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/banners/banner-2.webp" class="d-block w-100" alt="banner-2">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/banners/banner-3.avif" class="d-block w-100" alt="banner-3">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button> -->
+            </div>
+        </section>
+        <!-- banner end  -->
+
+        <!-- section card start -->
+        <section class="section-card">
+            <div class="container py-5">
+                <div class="row">
+                    <h1 class="text-center py-3 text-dark z-1">
+                        Scoter
+                    </h1>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_1.webp" class="card-img-top" alt="scoty_1">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">First Scoter</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Scoter One</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_2.webp" class="card-img-top" alt="scoty_2">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">Second Scoter</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Scoter Two</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_3.webp" class="card-img-top" alt="scoty_3">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">Third Scoter</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Scoter Three</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_4.webp" class="card-img-top" alt="scoty_4">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">Forth Scoter</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Forth Fifth</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_1.webp" class="card-img-top" alt="scoty_5">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">Fifth Scoter</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Fifth Scoter</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_2.webp" class="card-img-top" alt="scoty_6">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">Sixth Scoter</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Sixth Scoter</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_3.webp" class="card-img-top" alt="scoty_7">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">Seventh Scoter</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Seventh Scoter</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                        <a href="#">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="assets/img/scoty/scoty_4.webp" class="card-img-top" alt="scoty_8">
+                                    <div class="overlay top-overlay">
+                                        <div class="text">Eighth Scoter</div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Eighth Scoter</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn primary-btn">Go somewhere</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section card end -->
+
+        <!-- about-section start hear -->
+        <section class="about-section py-5" id="about">
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center py-3">
+                        About
+                    </h1>
+                    <div class="col-lg-5 col-md-5 col-12 align-items-center about-img">
+                        <img src="assets/img/scoty/scoty.png" width='100%' alt="about-scoty">
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-12">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi tenetur dicta aliquam
+                        veritatis, quo id. Odit earum quam repellat consectetur doloribus, amet ipsum. Totam minima
+                        dolorum, recusandae quibusdam esse temporibus.
+                        Sed perspiciatis ducimus fuga quidem deleniti, quas omnis eligendi ullam placeat quisquam fugiat
+                        illo doloremque beatae dolor minima velit repellat ea, totam enim quis error quod incidunt?
+                        Velit, laboriosam ut!
+                        Tempore itaque soluta provident ex natus, expedita porro dolorem in nihil quam consequatur
+                        quisquam. Dicta corrupti optio numquam possimus veritatis, similique cupiditate, non, dolorem
+                        nesciunt adipisci aliquid vel ad ut.
+                        Perspiciatis, quam provident. Doloribus, nostrum natus porro eveniet sunt maiores iusto quo
+                        laborum. Expedita numquam inventore id obcaecati a sint assumenda nemo, alias sed quas dolorem
+                        odio maiores minus nostrum?
+                        Natus quisquam consectetur quasi! Odio repellat, corrupti magni dolorem laudantium amet, eum
+                        quisquam reprehenderit tenetur vel necessitatibus sunt corporis porro perferendis recusandae
+                        eveniet earum! Corporis, magni doloribus! Minus, recusandae esse.
+                        Quo ea earum velit, corporis necessitatibus consectetur animi blanditiis eaque ut eius,
+                        dignissimos dolore recusandae maxime reprehenderit ducimus amet a ad cumque laborum, inventore
+                        iste culpa. Tempora possimus cum amet.
+                        Ducimus illo error iusto distinctio voluptate dignissimos laboriosam assumenda culpa autem
+                        commodi reiciendis quam sint nemo tenetur adipisci temporibus, dolore repellat soluta delectus
+                        molestiae excepturi aut ipsa itaque? A, placeat?
+                        Voluptatum, laborum et aperiam iusto tempora reiciendis aliquid? Ab culpa aliquam accusamus
+                        ullam doloribus mollitia distinctio ratione error eveniet ipsa velit veniam minima in molestiae
+                        qui laudantium ex, modi minus .
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-section end hear -->
+
+        <!-- image-gallery start hear -->
+        <section class="image-gallery" id="gallery">
+            <div class="container py-5">
+                <div class="row">
+                    <h2 class="text-center py-3">
+                        Image Gallery
+                    </h2>
+                    <div class="gallery-wrapper">
+                        <div class="gallery-inner">
+                            <div class="gallery-img" data-aos="fade-up">
+                                <img src="assets/img/scoty/scoter-8.webp" alt="">
+                            </div>
+                            <div class="gallery-img" data-aos="fade-down">
+                                <img src="assets/img/scoty/scoter-9.webp" alt="">
+                            </div>
+                            <div class="gallery-img" data-aos="fade-up">
+                                <img src="assets/img/scoty/scoter-10.webp" alt="">
+                            </div>
+                            <div class="gallery-img" data-aos="fade-down">
+                                <img src="assets/img/scoty/scoter-11.webp" alt="">
+                            </div>
+                            <div class="gallery-img" data-aos="fade-down">
+                                <img src="assets/img/scoty/scoter-12.webp" alt="">
+                            </div>
+                            <div class="gallery-img" data-aos="fade-up">
+                                <img src="assets/img/scoty/scoter-13.webp" alt="">
+                            </div>
+                            <div class="gallery-img" data-aos="fade-down">
+                                <img src="assets/img/scoty/scoter-14.webp" alt="">
+                            </div>
+                            <div class="gallery-img" data-aos="fade-up">
+                                <img src="assets/img/scoty/scoter-15.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- image-gallery end hear -->
+
+        <!-- contact section start -->
+        <section class="contact-section py-5" id="contact">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center py-4">Contact</h2>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="contact-box text-center mb-2 mb-md-0">
+                            <p><i class="bi bi-geo-fill"></i></p>
+                            <p>
+                            <h5>Our Office Address</h5>
+                            </p>
+                            <p>Vijaypur, Samba - Jammu and Kashmir (UT)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="contact-box text-center mb-2 mb-md-0">
+                            <p><i class="bi bi-send-arrow-up-fill"></i></p>
+                            <p>
+                            <h5>General Enquiries</h5>
+                            </p>
+                            <p><a class='text-dark' href="mailTo:SKulvinder625@gmail.com">SKulvinder625@gmail.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="contact-box text-center mb-2 mb-md-0">
+                            <p><i class="bi bi-telephone-outbound-fill"></i></p>
+                            <p>
+                            <h5>Call Us</h5>
+                            </p>
+                            <p><a class='text-dark' href="tel:9906246006">9906246006</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="contact-box text-center mb-2 mb-md-0">
+                            <p><i class="bi bi-clock-fill"></i></p>
+                            <p>
+                            <h5>Our Timing</h5>
+                            </p>
+                            <p>Mon - Sun : 10:00 AM - 07:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-5">
+                    <div class="col-lg-6 col-12">
+                        <img src="assets/img/dg.jpg" width='100%' alt="">
+                    </div>
+                    <div class="col-lg-6 col-12 Larger shadow">
+                        <h4 class="text-center pb-4">Form Registration</h4>
+                        <form class="row g-3 needs-validation" novalidate action="#">
+                            <div class="col-md-6">
+                                <label for="validationCustom01" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom02" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02" value="" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustomUsername" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        Please choose a username.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom03" class="form-label">City</label>
+                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom04" class="form-label">State</label>
+                                <select class="form-select" id="validationCustom04" required>
+                                    <option selected disabled value="">Choose State</option>
+                                    <option>Punjab</option>
+                                    <option>Haryana</option>
+                                    <option>Rajsthan</option>
+                                    <option>Himachal Pradesh</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom05" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                    <label class="form-check-label" for="invalidCheck">
+                                        Agree to terms and conditions
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn primary-btn" type="submit">Submit form</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  contact section end -->
+
+        <!-- section slick slider start -->
+        <section class="slides py-5">
+            <div class="container">
+                <div class="row responsive">
+                    <div class="col-lg-3">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-5 d-flex justify-content-center">
+                                    <img src="assets/img/scoty/scoter-1.webp" class="img-fluid rounded-start"
+                                        alt="scoter-1">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Scoter title 1</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-5 d-flex justify-content-center">
+                                    <img src="assets/img/scoty/scoter-2.webp" class="img-fluid rounded-start"
+                                        alt="scoter-2">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Scoter title 2</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-5 d-flex justify-content-center">
+                                    <img src="assets/img/scoty/scoter-3.webp" class="img-fluid rounded-start"
+                                        alt="scoter-3">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Scoter title 3</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-5 d-flex justify-content-center">
+                                    <img src="assets/img/scoty/scoter-4.webp" class="img-fluid rounded-start"
+                                        alt="scoter-4">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Scoter title 4</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-5 d-flex justify-content-center">
+                                    <img src="assets/img/scoty/scoter-5.webp" class="img-fluid rounded-start"
+                                        alt="scoter-5">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Scoter title 5</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-5 d-flex justify-content-center">
+                                    <img src="assets/img/scoty/Scoter-6.webp" class="img-fluid rounded-start"
+                                        alt="Scoter-6">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Scoter title 6</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-5 d-flex justify-content-center">
+                                    <img src="assets/img/scoty/scoter-7.webp" class="img-fluid rounded-start"
+                                        alt="Scoter-7">
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Scoter title 7</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section slick slider end  -->
+
+        <!-- section map start -->
+        <section class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26900.630819065136!2d75.00521741379713!3d32.5640833392738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391c21b2dd09d961%3A0x34cf8838f6172ab6!2sVijaypur%20184120!5e0!3m2!1sen!2sin!4v1719232214711!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <!-- section map end -->
+
+        <!-- section running scoter start -->
+        <section>
+            <div class="building position-relative">
+                <img src="assets/img/2-removebg-preview.png" class='' alt="">
+            </div>
+        </section>
+        <!-- section running scoter start -->
+
+        <!-- footer start -->
+        <footer>
+            <div class="container-fluid">
+                <div class="row p-5">
+                    <div class="col-md-5">
+                        <a href="#">
+                            <img src="assets/img/logo_ktc.png" alt="footer-logo">
+                        </a>
+                        <div class="py-3">
+                            <p><span>Address :</span>Vijaypur, Samba - Jammu and Kashmir (UT)</p>
+                            <p><span>Contact :</span>9906246006</p>
+                            <p><span>Gmail :</span> SKulvinder625@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-links">
+                            <h4>Links</h4>
+                            <ul>
+                                <li><a href="#"><i class="bi bi-arrow-right-short"></i>Home</a></li>
+                                <li><a href="#"><i class="bi bi-arrow-right-short"></i>About</a></li>
+                                <li><a href="#"><i class="bi bi-arrow-right-short"></i>Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Terms & Conditions</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, molestiae autem fugit non
+                            nobis et nemo! Ea officia at voluptates repellat commodi voluptatibus, ex, assumenda facere
+                            id omnis, possimus cum!
+                        </p>
+                    </div>
+                </div>
+                <!-- <img src="assets/img/scoty/scoter-1.webp" id='running_scoter' alt="running_scoter"> -->
+            </div>
+        </footer>
+        <!-- footer end  -->
+    </main>
+    <!-- main html end  -->
+     
+    <!-- js links start -->
+     <!-- jquery links -->
+    <script src="assets/vendor/jquery/jquery-3.7.1.js"></script>
+    <!-- slick slider links -->
+    <script src="assets/vendor/slick_slider/slick.min.js"></script>
+    <!-- aos links  -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <!-- bootstrap links -->
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.js"></script>
+    <!-- custom jquery links  -->
+    <script src="assets/js/custom.jquery.js"></script>
+    <!-- custom js links -->
+    <script src="assets/js/custom.js"></script>
+    <!-- js links end  -->
+
+    <!-- js start -->
+    <script>
+        // modal js start
+        var modalElem = document.getElementById("staticBackdrop")
+        var openModalElem = setTimeout(openModal, 3000);
+        function openModal() {
+            console.log('modalElem', modalElem)
+            modalElem.style.display = 'block';
+            modalElem.style.opacity = 1;
+
+        }
+        function closeModal() {
+            modalElem.style.display = 'none';
+        }
+        // modal js end
+        function onclickfun(){
+            console.log('ok')
+        }
+
+
+    </script>
+    <!-- js end  -->
+</body>
+
+</html>
